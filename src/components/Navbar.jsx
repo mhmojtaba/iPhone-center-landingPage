@@ -9,12 +9,13 @@ const Navbar = () => {
         <div className="flex flex-1 justify-center max-sm:hidden">
           {navLists.map((item) => {
             return (
-              <div
+              <a
+                href={"#"}
                 key={item}
                 className="px-5 text-sm cursor-pointer text-gray hover:text-white transition-all"
               >
                 {item}
-              </div>
+              </a>
             );
           })}
         </div>

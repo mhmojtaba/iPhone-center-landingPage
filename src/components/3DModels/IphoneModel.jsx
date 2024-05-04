@@ -7,12 +7,31 @@ Source: https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841
 Title: Apple iPhone 15 Pro Max Black
 */
 
-import { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useEffect, useRef } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
+import * as THREE from "three";
 
-export default function IphoneModel(props) {
+const IphoneModel = (props) => {
   const modelRef = useRef();
   const { nodes, materials } = useGLTF("/models/iphone.glb");
+
+  const texture = useTexture(props.item.img);
+
+  useEffect(() => {
+    Object.entries(materials).map((material) => {
+      if (
+        material[0] !== "zFdeDaGNRwzccye" &&
+        material[0] !== "ujsvqBWRMnqdwPx" &&
+        material[0] !== "hUlRcbieVuIiOXG" &&
+        material[0] !== "jlzuBkUzuJqgiAK" &&
+        material[0] !== "xNrofRCqOXXHVZt"
+      ) {
+        material[1].color = new THREE.Color(props.item.color[0]);
+      }
+      material[1].needsUpdate = true;
+    });
+  }, [materials, props.item]);
+
   return (
     <group ref={modelRef} {...props} dispose={null}>
       <mesh
@@ -127,6 +146,7 @@ export default function IphoneModel(props) {
         material={materials.pIJKfZsazmcpEiU}
         scale={0.01}
       />
+      <meshStandardMaterial roughness={1} map={texture} />
       <mesh
         castShadow
         receiveShadow
@@ -234,6 +254,8 @@ export default function IphoneModel(props) {
       />
     </group>
   );
-}
+};
+
+export default IphoneModel;
 
 useGLTF.preload("/models/iphone.glb");

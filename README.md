@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 ```
 gsap => animation maker
+three.js => making 3d models
 
 
 ```
