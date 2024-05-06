@@ -10,11 +10,11 @@ const Navbar = () => {
           {navLists.map((item) => {
             return (
               <a
-                href={"#"}
-                key={item}
+                href={item.link}
+                key={item.label}
                 className="px-5 text-sm cursor-pointer text-gray hover:text-white transition-all"
               >
-                {item}
+                {item.label}
               </a>
             );
           })}

@@ -1,3 +1,4 @@
+import { label } from "three/examples/jsm/nodes/Nodes.js";
 import {
   blackImg,
   blueImg,
@@ -9,7 +10,24 @@ import {
   yellowImg,
 } from "../utils/assets";
 
-export const navLists = ["Store", "Mac", "iPhone", "Support"];
+export const navLists = [
+  {
+    label: "Store",
+    link: "#",
+  },
+  {
+    label: "Mac",
+    link: "/#highlights",
+  },
+  {
+    label: "iPhone",
+    link: "/#model",
+  },
+  {
+    label: "Support",
+    link: "/#features",
+  },
+];
 
 export const hightlightsSlides = [
   {

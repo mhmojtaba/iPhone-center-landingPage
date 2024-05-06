@@ -7,6 +7,7 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "../../constants";
+import { animationWithGsapTimeLine } from "../../utils/animation";
 
 const Model3D = () => {
   const [size, setSize] = useState("small");
@@ -25,12 +26,20 @@ const Model3D = () => {
   const [smallRotation, setSmallRotation] = useState(0);
   const [largeRotation, setLargeRotation] = useState(0);
 
-  const timeLine = gsap.timeline();
+  const tl = gsap.timeline();
 
   useEffect(() => {
     if (size === "large") {
+      animationWithGsapTimeLine(tl, small, smallRotation, "#view1", "#view2", {
+        transform: "translateX(-100%)",
+        duration: 2,
+      });
     }
-    if (size === "large") {
+    if (size === "small") {
+      animationWithGsapTimeLine(tl, large, largeRotation, "#view2", "#view1", {
+        transform: "translateX(0)",
+        duration: 2,
+      });
     }
   }, [size]);
 
@@ -42,7 +51,7 @@ const Model3D = () => {
     });
   }, []);
   return (
-    <section className="common-padding">
+    <section className="common-padding" id="model">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
           Take a look

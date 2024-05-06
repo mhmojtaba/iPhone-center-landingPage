@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 ```
 gsap => animation maker
 three.js => making 3d models
+@sentry/react => track traces for errors and handle them using ai
 
 
 ```

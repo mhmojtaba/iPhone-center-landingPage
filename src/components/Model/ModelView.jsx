@@ -19,13 +19,15 @@ const ModelView = ({
   item,
   size,
 }) => {
+  // console.log(controlRef);
   return (
     <View
       index={index}
       id={gsapType}
-      className={`w-full h-full ${index === 2} ?'right-[-100px] :""`}
+      className={`w-full h-full absolute
+       ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <ambientLight intensity={0.3} />
+      <ambientLight intensity={3} />
 
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
@@ -37,7 +39,7 @@ const ModelView = ({
         enablePan={false}
         rotateSpeed={0.5}
         target={new THREE.Vector3(0, 0, 0)}
-        onEnd={() => setRotationState(controlRef.current.getAzimuthalAngel())}
+        onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
 
       <group
