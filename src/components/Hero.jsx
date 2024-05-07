@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { heroVideo, smallHeroVideo } from "../utils/assets";
 
-const Hero = () => {
+const Hero = ({ ref }) => {
   const [videoSrc, setVideoSrc] = useState(
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
@@ -29,7 +29,7 @@ const Hero = () => {
     gsap.to("#cta", { opacity: 1, delay: 2.8, y: -50 });
   }, []);
   return (
-    <section className="w-full bg-black relative nav-height">
+    <section className="w-full bg-black relative nav-height" ref={ref}>
       <div className="h-5/6 w-full flex-col flex-center">
         <p id="hero" className="hero-title">
           Iphone 15 pro

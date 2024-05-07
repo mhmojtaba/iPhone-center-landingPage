@@ -26,7 +26,17 @@ import explore1 from "/assets/images/explore1.jpg";
 import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
+import chipSet from "/assets/images/chip.png";
+import home from "/assets/images/home.svg";
+import highlight from "/assets/images/highlight.png";
+import feature from "/assets/images/feature.png";
+import model from "/assets/images/3dcube.png";
 
+const homeImg = home;
+const highlightImg = highlight;
+const featureImg = feature;
+const modelImg = model;
+const chipSetImg = chipSet;
 const heroImg = hero;
 const heroVideo = hmv;
 const smallHeroVideo = smallmv;
@@ -81,4 +91,9 @@ export {
   explore2Img,
   chipImg,
   frameImg,
+  chipSetImg,
+  homeImg,
+  highlightImg,
+  featureImg,
+  modelImg,
 };

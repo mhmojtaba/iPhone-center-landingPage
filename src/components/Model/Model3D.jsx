@@ -9,7 +9,7 @@ import { View } from "@react-three/drei";
 import { models, sizes } from "../../constants";
 import { animationWithGsapTimeLine } from "../../utils/animation";
 
-const Model3D = () => {
+const Model3D = ({ ref2 }) => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState(models[0]);
 
@@ -51,7 +51,7 @@ const Model3D = () => {
     });
   }, []);
   return (
-    <section className="common-padding" id="model">
+    <section className="common-padding" id="model" ref={ref2}>
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
           Take a look

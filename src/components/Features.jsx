@@ -1,18 +1,19 @@
 import { useGSAP } from "@gsap/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { animateWithGsap } from "../utils/animation";
 import { explore1Img, explore2Img, exploreVideo } from "../utils/assets";
 import { useRef } from "react";
 import gsap from "gsap";
 
-const Features = () => {
+const Features = ({ ref3 }) => {
   const videoRef = useRef();
+
   useGSAP(() => {
     gsap.to("#exploreVideo", {
       scrollTrigger: {
         trigger: "#exploreVideo",
         toggleActions: "play pause reverse restart", // 'onStart onLeave enterBack leaveBack'
-        start: "-10% buttom",
+        start: "-10% bottom",
       },
       onComplete: () => {
         videoRef.current.play();
@@ -43,6 +44,7 @@ const Features = () => {
   return (
     <section
       id="features"
+      ref={ref3}
       className="h-full common-padding bg-zinc overflow-hidden relative"
     >
       <div className="screen-max-width">

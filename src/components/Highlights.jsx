@@ -3,13 +3,14 @@ import gsap from "gsap";
 import { rightImg, watchImg } from "../utils/assets";
 import VideoCarousel from "./VideoCarousel";
 
-const Highlights = () => {
+const Highlights = ({ ref1 }) => {
   useGSAP(() => {
     gsap.to("#title", { opacity: 1, y: 0 });
     gsap.to(".link", { opacity: 1, y: 0, duration: 1, stagger: 0.3 });
   }, []);
   return (
     <section
+      ref={ref1}
       id="highlights"
       className="w-screen h-full common-padding overflow-hidden bg-zinc"
     >

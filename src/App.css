@@ -7,6 +7,72 @@
   animation: spinner-zp9dbg 1s infinite linear;
 }
 
+.icon {
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+
+.icon-text {
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.indicator {
+  position: absolute;
+  top: -35%;
+  transform: translateX(19%);
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transform: translateX(19%);
+  -moz-transform: translateX(19%);
+  -ms-transform: translateX(19%);
+  -o-transform: translateX(19%);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+/* .indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border-top-right-radius: 15px;
+  box-shadow: 0px -10px 0 0 transparent;
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border-top-left-radius: 15px;
+  box-shadow: 0px -10px 0 0 transparent;
+} */
+
 @keyframes spinner-zp9dbg {
   to {
     transform: rotate(1turn);

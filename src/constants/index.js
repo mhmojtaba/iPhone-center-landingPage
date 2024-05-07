@@ -1,32 +1,25 @@
-import { label } from "three/examples/jsm/nodes/Nodes.js";
 import {
   blackImg,
   blueImg,
+  chipSetImg,
+  featureImg,
   highlightFirstVideo,
   highlightFourthVideo,
+  highlightImg,
   highlightSecondVideo,
   highlightThirdVideo,
+  homeImg,
+  modelImg,
   whiteImg,
   yellowImg,
 } from "../utils/assets";
 
 export const navLists = [
-  {
-    label: "Store",
-    link: "#",
-  },
-  {
-    label: "Mac",
-    link: "/#highlights",
-  },
-  {
-    label: "iPhone",
-    link: "/#model",
-  },
-  {
-    label: "Support",
-    link: "/#features",
-  },
+  { id: 0, label: "Home", link: "#", icon: homeImg },
+  { id: 1, label: "Highlights", link: "/#highlights", icon: highlightImg },
+  { id: 2, label: "3DModel", link: "/#model", icon: modelImg },
+  { id: 3, label: "Features", link: "/#features", icon: featureImg },
+  { id: 4, label: "ChipSet", link: "/#chip", icon: chipSetImg },
 ];
 
 export const hightlightsSlides = [
