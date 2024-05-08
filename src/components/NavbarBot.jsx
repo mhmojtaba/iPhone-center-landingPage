@@ -2,7 +2,6 @@ import { navLists } from "../constants";
 
 const NavbarBot = ({ activeTab }) => {
   const tab = activeTab();
-  console.log(tab);
 
   return (
     <>
@@ -38,7 +37,9 @@ const NavbarBot = ({ activeTab }) => {
                           className={`absolute 
                           translate-y-5
                          opacity-0 font-normal text-xs text-gray-50 icon-text ${
-                           tab === item.id ? "translate-y-2 opacity-100" : ""
+                           tab === item.id
+                             ? "translate-y-[9px] opacity-100"
+                             : ""
                          }`}
                         >
                           {item.label}

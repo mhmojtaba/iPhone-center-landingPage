@@ -13,10 +13,10 @@ import NavbarBot from "./components/NavbarBot";
 import { useInView } from "react-intersection-observer";
 
 function App() {
+  //useInView react-intersection-observer
   const [ref1, inView1] = useInView({
     threshold: 0.1,
   });
-
   const [ref2, inView2] = useInView({
     threshold: 0.1,
   });
@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <main className="bg-black" inView={inView1}>
-        <Navbar />
+        <Navbar activeTab={activeTab} />
         <Hero />
         <Highlights ref1={ref1} />
         <Model3D ref2={ref2} />

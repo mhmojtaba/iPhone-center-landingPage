@@ -11,6 +11,6 @@ Currently, two official plugins are available:
 gsap => animation maker
 three.js => making 3d models
 @sentry/react => track traces for errors and handle them using ai
-
+react-intersection-observer => spying scroll behavior || react-scroll can be used too**
 
 ```

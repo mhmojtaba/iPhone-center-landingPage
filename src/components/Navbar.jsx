@@ -1,10 +1,15 @@
 import { navLists } from "../constants";
 import { appleImg, bagImg, searchImg } from "../utils/assets";
 
-const Navbar = () => {
+const Navbar = ({ activeTab }) => {
+  const tab = activeTab();
   return (
     <>
-      <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
+      <header
+        className="w-full fixed top-0
+       py-5 sm:px-10 px-5 z-10 bg-[#333333]/70 backdrop-blur-sm sm:backdrop-blur-md
+       flex justify-between items-center"
+      >
         <nav className="flex w-full screen-max-width">
           <img src={appleImg} alt="apple" width={14} height={18} />
           <div className="flex flex-1 justify-center max-sm:hidden">
@@ -12,8 +17,11 @@ const Navbar = () => {
               return (
                 <a
                   href={item.link}
-                  key={item.label}
-                  className="px-5 text-sm cursor-pointer text-gray hover:text-white transition-all"
+                  key={item.id}
+                  className={`px-5 text-sm cursor-pointer text-gray hover:text-white transition-all ${
+                    tab === item.id ? "text-white" : ""
+                  }
+                  `}
                 >
                   {item.label}
                 </a>
